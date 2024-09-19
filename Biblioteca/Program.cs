@@ -2,14 +2,15 @@
 using Biblioteca.Common.Models;
 
 
-ColecaoDeLivros BB = new();
-ColecaoDeUsuarios U = new();
+ColecaoDeLivros BB = new();//objeto Biblioteca, irá conter uma lista com todos os livros cadastrados na biblioteca
+ColecaoDeUsuarios U = new();//objeto Usuários, irá conter uma lista de todos os usuários cadastrados
 string? opcao;
 
-Console.WriteLine("------Bem vindo a Biblioteca------");
+
 while (true)
 {
     Console.Clear();
+    Console.WriteLine("------Bem vindo a Biblioteca------");
     Console.WriteLine("Escolha uma opção:");
     Console.WriteLine("[1] Cadastrar livro");
     Console.WriteLine("[2] Cadastrar usuário");

@@ -31,7 +31,7 @@ namespace Biblioteca.Common.Models
         private string _autor;
         private string _isbn;
         public bool Disponivel = true;
-        public string Nome
+        public string Nome//Dispara uma exceção para que o Nome do livro não seja vazio
         {
             get => _nome;
             set
@@ -43,7 +43,7 @@ namespace Biblioteca.Common.Models
                 _nome = value;
             }
         }
-        public string Autor
+        public string Autor//Faz a validação para que o Autor não seja vazio e caso seja atribui como padrão "Desconhecido"
         {
             get => _autor;
             set
@@ -64,7 +64,7 @@ namespace Biblioteca.Common.Models
             get => _isbn;
             set
             {
-                if (ValidarCodigoIsbn(value))
+                if (ValidarCodigoIsbn(value))//Validação do código do livro
                 {
                     _isbn = value;
                 }
@@ -75,7 +75,7 @@ namespace Biblioteca.Common.Models
             }
         }
 
-        public bool Emprestar()
+        public bool Emprestar()//Caso deseje pegar um livro emprestado essa função apensa muda o valor de Disponivel caso o livro não esteja em posse de outra pessoa
         {
             if (Disponivel)
             {
@@ -85,19 +85,19 @@ namespace Biblioteca.Common.Models
             return false;
         }
 
-        public void Devolver()
+        public void Devolver()//Somente atribui true a variável Disponivel
         {
             Disponivel = true;
         }
 
-        private bool ValidarCodigoIsbn(string codigo)
+        private bool ValidarCodigoIsbn(string codigo)//Realiza a validação do ISBN utilizando regex, exemplo valido(123456789X) ou (1234567892222)
         {
             codigo = codigo.ToUpper().Replace(" ", "").Replace("-", "");
             string padrao = @"^(\d{9}[0-9X]|\d{13})$";
             return Regex.IsMatch(codigo, padrao);
         }
 
-        public void Informacao()
+        public void Informacao()//Exibe as principais informações do Livro
         {
             Console.WriteLine($"Título: {Nome} - Autor: {Autor} - Disponível: {(Disponivel ? "Sim" : "Não")}");
         }

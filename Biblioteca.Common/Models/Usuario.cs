@@ -50,7 +50,7 @@ namespace Biblioteca.Common.Models
             get => _cpf;
             set
             {
-                if (ValidarCpf(value))
+                if (ValidarCpf(value))//Validação do CPF
                 {
                     _cpf = value;
                 }
@@ -61,40 +61,40 @@ namespace Biblioteca.Common.Models
             }
         }
 
-        public void EmprestarLivro(Livro livro)
+        public void EmprestarLivro(Livro livro)//Recebe como parâmetro um obejto livro
         {
-            if (livro.Emprestar())
+            if (livro.Emprestar())//Caso a função emprestar retorne true significa que o livro está disponível e pode ser pego
             {
                 livro.Emprestar();
-                LivrosEmprestados.Add(livro);
+                LivrosEmprestados.Add(livro);//Depois de pego, o livro é adicionado a lista de livros emprestados de cada usuário
                 Console.WriteLine("Livro emprestado com sucesso");
             }
-            else
+            else //Caso o livro estaja indisponivel para ser pego, por conta de sua disponibilidade, é lançado uma exceção
             {
                 throw new ArgumentException("Livro está emprestado para alguém");
             }
         }
 
-        public void DevolverLivro(Livro livro)
+        public void DevolverLivro(Livro livro)//Recebe um objeto Livro como parâmetro
         {
-            foreach (var item in LivrosEmprestados)
+            foreach (var item in LivrosEmprestados)//Faz uma varredura na lista de livros emprestados para retira-lo da lista, simbolizando que o livro foi devolvido a biblioteca
             {
-                if (item.Nome.Equals(livro.Nome, StringComparison.CurrentCultureIgnoreCase))
+                if (item.Nome.Equals(livro.Nome, StringComparison.CurrentCultureIgnoreCase))//É verificado se o nome do livro na lista de livros emprestados é igual ao recebido como parâmetro, pois o objeto livro recebido mesmo tendo as mesmas informações de algum livro da lista ainda assim não pode ser comparado como o mesmo objeto na memoria
                 {
                     LivrosEmprestados.Remove(item);
                     Console.WriteLine("Livro devolvido com sucesso");
-                    return;
+                    return;//return usado para finalizar a busca para que não dispare a exceção 
                 }
             }
             throw new ArgumentException("Esse livro não está com esse usuário");
         }
 
-        public bool ValidarCpf(string cpf)
+        public bool ValidarCpf(string cpf)//Validação do CPF usando Regex, exemplo valido(123.555.666-52) ou (12345678911)
         {
             string padrao = @"^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$";
             return Regex.IsMatch(cpf, padrao);
         }
-        public void Informacao()
+        public void Informacao()//É exibido as informações do usuário juntamente com os livros que estão em sua posse
         {
             Console.WriteLine($"Usuário nome: {Nome} - CPF: {Cpf}");
             if (LivrosEmprestados.Count <= 0)
