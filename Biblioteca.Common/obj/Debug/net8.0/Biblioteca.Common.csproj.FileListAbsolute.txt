@@ -1,0 +1,11 @@
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\Biblioteca.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\Biblioteca.Common.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\Biblioteca.Common.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\Biblioteca.Common.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\bin\Debug\net8.0\Biblioteca.Common.deps.json
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\bin\Debug\net8.0\Biblioteca.Common.dll
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\bin\Debug\net8.0\Biblioteca.Common.pdb
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\Biblioteca.Common.dll
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\refint\Biblioteca.Common.dll
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\Biblioteca.Common.pdb
+C:\Users\Usuario\OneDrive\Área de Trabalho\ProjetosPraticaC#\Desafio_1\Biblioteca.Common\obj\Debug\net8.0\ref\Biblioteca.Common.dll
